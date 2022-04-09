@@ -63,7 +63,7 @@ function About() {
           </div>
         </div>
         <div>
-          <div className=' flex flex-row gap-64'>
+          <div className=' flex flex-row gap-72'>
             <div className='m-2'><Icon icon="iconoir:face-id" width="50" height="50"/>Face ID</div>
             <div className=''><Icon icon="ic:round-5g" width="50" height="50" />5G capable</div>
           </div>
