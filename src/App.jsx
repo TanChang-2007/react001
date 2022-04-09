@@ -43,19 +43,31 @@ function Details() {
 
 function About() {
   return (
-    <body className=' bg-white rounded-3xl flex justify-center items-center flex-col p-20 relative'>
+    <body className=' bg-white rounded-3xl flex justify-center items-center flex-col relative p-20'>
       <div>
-       <Link to="/details" className='flex-3 justify-start items-start absolute top-0 left-0 m-5'>
-         <Icon icon="akar-icons:cross" width="20" height="20" />
-       </Link>
+        <Link to="/details" className='flex-3 justify-start items-start absolute top-0 left-0 m-5'>
+          <Icon icon="akar-icons:cross" width="20" height="20" />
+        </Link>
         <div className='flex'>
-        <img className='w-64' src={Iphone} />
-        <img className='bg-white w-auto' src={Iphones} />
-      </div>
-      <div>
-        <div className='flex flex-center items-center flex-row text-lg font-bold pr-24'><Icon icon="ion:hardware-chip" width="50" height="50" className='m-2' /> The new AC1 Ultra Chip </div>
-        <div className='pl-10'>The best smart phone chip ever</div>
-      </div>
+          <img className='w-64' src={Iphone} />
+          <img className='bg-white w-auto' src={Iphones} />
+        </div>
+        <div className='flex flex-row'>
+          <div>
+            <div className='flex flex-center items-center flex-row text-lg font-bold pr-24'><Icon icon="ion:hardware-chip" width="50" height="50" className='m-2' /> The new AC1 Ultra Chip </div>
+            <div className='pl-10'>The best smart phone chip ever</div>
+          </div>
+          <div>
+            <div><Icon icon="fa:battery" width="50" height="50" /></div>
+            <div>Up to 28 hours video playback⁴</div>
+          </div>
+        </div>
+        <div>
+          <div className=' flex flex-row gap-64'>
+            <div className='m-2'><Icon icon="iconoir:face-id" width="50" height="50"/>Face ID</div>
+            <div className=''><Icon icon="ic:round-5g" width="50" height="50" />5G capable</div>
+          </div>
+        </div>
       </div>
     </body>
   )
