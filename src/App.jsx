@@ -2,7 +2,7 @@ import React from 'react'
 import Iphone from './Iphone.png'
 import Iphones from './Iphones.png'
 import { Icon } from '@iconify/react';
-import { BrowserRouter, Routes, Route, Outlet, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 function Details() {
   return (
@@ -15,12 +15,13 @@ function Details() {
           <Icon icon="akar-icons:cross" width="20" height="20" />
         </Link>
         <div className='relative text-3xl font-bold mb-4'>Iphone 14 Pro Max </div>
-        <button className=' flex flex-row gap-3 pb-4'>
+        <button className=' flex flex-row gap-4 pb-4'>
           <div className='w-8 h-8 bg-black relative rounded-full'></div>
           <div className='w-8 h-8 bg-green-900 relative rounded-full'></div>
           <div className='w-8 h-8 bg-slate-400 relative rounded-full'></div>
-          <div className='w-8 h-8 bg-orange-200 relative rounded-full'></div>
           <div className='w-8 h-8 bg-blue-300 relative rounded-full'></div>
+          <div className='w-8 h-8 bg-orange-200 relative rounded-full'></div>
+          <Link to="/about" className='text-blue-600 underline'>About</Link>
         </button>
         <div className="flex flex-col gap-1">
           <button className='flex flex-row gap-1 pt-5'>
@@ -42,11 +43,20 @@ function Details() {
 
 function About() {
   return (
-    <body className='flex justify-center items-center flex-col'>
-      <div className=''>
-        <img src={Iphone} />
+    <body className=' bg-white rounded-3xl flex justify-center items-center flex-col p-20 relative'>
+      <div>
+       <Link to="/details" className='flex-3 justify-start items-start absolute top-0 left-0 m-5'>
+         <Icon icon="akar-icons:cross" width="20" height="20" />
+       </Link>
+        <div className='flex'>
+        <img className='w-64' src={Iphone} />
+        <img className='bg-white w-auto' src={Iphones} />
       </div>
-      <div></div>
+      <div>
+        <div className='flex flex-center items-center flex-row text-lg font-bold pr-24'><Icon icon="ion:hardware-chip" width="50" height="50" className='m-2' /> The new AC1 Ultra Chip </div>
+        <div className='pl-10'>The best smart phone chip ever</div>
+      </div>
+      </div>
     </body>
   )
 }
